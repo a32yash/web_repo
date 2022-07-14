@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+</head>
+<body>
+    <div class="form-container">
+        <div class="input-container">
+            <input type="number" id="num1" placeholder="Enter First Number">
+        </div>
+        <div class="input-container">
+            <input type="number" id="num2" placeholder="Enter Second Number">
+        </div>
+        <div class="button-container">
+            <button onclick="Add()">Add</button>
+            <button onclick="Sub()">Sub</button>
+            <button onclick="Mul()">Mul</button>
+            <button onclick="Div()">Div</button>
+        </div>
+        <div class="result-container" id="res-holder">
+            0
+        </div>
+        </div>
+    
+        <script type="text/javascript">
+            function Add(){
+                var x=parseFloat (document.getElementById("num1").value)
+                var y=parseFloat(document.getElementById("num2").value)
+                var z=x+y;
+                var result=z;
+                document.getElementById("res-holder").innerHTML=result;
+            }
+
+
+            function Sub(){
+                var x=parseFloat (document.getElementById("num1").value)
+                var y=parseFloat(document.getElementById("num2").value)
+                var z=x-y;
+                var result=z;
+                document.getElementById("res-holder").innerHTML=result;
+            }
+
+
+            function Mul(){
+                var x=parseFloat (document.getElementById("num1").value)
+                var y=parseFloat(document.getElementById("num2").value)
+                var z=x*y;
+                var result=z;
+                document.getElementById("res-holder").innerHTML=result;
+            }
+
+
+            function Div(){
+                var x=parseFloat (document.getElementById("num1").value)
+                var y=parseFloat(document.getElementById("num2").value)
+                var z=x/y;
+                var result=z;
+                document.getElementById("res-holder").innerHTML=result;
+            }
+        </script>
+    
+</body>
+</html>

@@ -1,0 +1,64 @@
+.form-container{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    padding: 50px;
+    margin:0 auto;
+    justify-content: center;
+    background-color: rgb(148, 109, 231);
+    box-shadow: rgb(86, 90, 118) 0px 30px 60px -12px inset, rgba(197, 138, 215, 0.9) 0px 18px 36px -18px inset;
+    width:60vw;
+    font-family: cursive;
+
+
+    
+}
+
+
+ output{
+    color: aliceblue;
+ }
+
+
+    h2 {
+        text-decoration: underline  rgb(41, 41, 43) 5px;
+        text-decoration-style: dashed;
+       }
+
+button{
+   
+     background-color: #0e0f10; /* black */
+  border-radius:5px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration:dashed;
+  display: inline-block;
+  font-size: 16px;
+    
+}
+
+
+
+.btn-container{
+    width: 130px;
+    padding: 25px;
+    margin-top: 25px;
+    border-color: rgb(131, 80, 80) 50%;
+
+   
+
+}
+
+input{
+    width:300px;
+    height:50px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    border-radius: 20px;
+    font-size: large;
+}
+ 
+.input-container{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
