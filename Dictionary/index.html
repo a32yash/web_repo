@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>DICTIONARY</title>
+   
+</head>
+<body>
+ 
+  <div class="form-container">
+   <h1><b><i>DICTIONARY</i></b></h1>
+  <div class="input-container">
+    <input type="text" id="input" placeholder="Enter the word" required> 
+  </div>
+    <div class="btn-container">
+      <button onclick="getdata()">Search</button>
+    </div>
+   
+     <h2 class="box">
+       Definitions <br>
+      <div class="output" id="output"></div>
+     </h2>
+     </div>
+    </div>
+    
+    <script>
+      
+        function getdata(){
+          var input=(document.getElementById("input").value)
+          var res = document.getElementById("output")
+          var box = document.querySelector(".box")
+            fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${input}`)
+  .then((response) => {
+    return response.json();
+  })
+  .then((myJson) => {
+    box.style.display="block";
+    // console.log(myJson[0].meanings[0].definitions[0].definition);
+    for (let index = 0; index < myJson[0].meanings[0].definitions.length; index++) {
+      console.log(myJson[0].meanings[0].definitions[index].definition);
+      res.innerHTML = res.innerHTML+myJson[0].meanings[0].definitions[index].definition+"<br><br>";
+    }
+  }).catch(function(){
+    // console.log("error");
+  });
+        }
+    </script>
+     
+</body>
+</html>
