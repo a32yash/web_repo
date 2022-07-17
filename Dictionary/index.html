@@ -20,7 +20,7 @@
     </div>
    
      <h2 class="box">
-       Definitions <br>
+       Definitions:<br> <br>
       <div class="output" id="output"></div>
      </h2>
      </div>
@@ -37,14 +37,17 @@
     return response.json();
   })
   .then((myJson) => {
+    console.log(myJson.title);
     box.style.display="block";
     // console.log(myJson[0].meanings[0].definitions[0].definition);
     for (let index = 0; index < myJson[0].meanings[0].definitions.length; index++) {
-      console.log(myJson[0].meanings[0].definitions[index].definition);
+      // console.log(myJson[0].meanings[0].definitions[index].definition);
       res.innerHTML = res.innerHTML+myJson[0].meanings[0].definitions[index].definition+"<br><br>";
     }
   }).catch(function(){
-    // console.log("error");
+    //  console.log("error");
+    res.innerHTML="No Definition Found, Try Again!";
+
   });
         }
     </script>
