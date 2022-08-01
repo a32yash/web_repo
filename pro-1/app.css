@@ -424,6 +424,10 @@ footer .content {
     margin:auto;
 }
 
+.overview{
+    color:#000000;
+}
+
 /* RESPONSIVE */
 
 @media only screen and (max-width: 850px) {
