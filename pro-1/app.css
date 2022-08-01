@@ -431,6 +431,16 @@ footer .content {
         font-size: 12px;
     }
 
+    
+.item-content-wraper {
+    /* display: none; */
+    width: 90%;
+}
+
+.tf{
+    font-size: 3.6em;
+}
+
     .about{
         width:90%;
         margin:auto;
@@ -438,6 +448,16 @@ footer .content {
     
     .about p{
         font-size: 1.35em;
+    }
+
+    .hero-slide-item-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        color: var(--text-color);
+        display: flex;
     }
 
 
@@ -459,6 +479,19 @@ footer .content {
     .nav-menu li{
         margin:10px 30px;
     
+    }
+
+    img{
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    .owl-item{
+        height: 100vh;
+    }
+
+    .hero-slide-item{
+        height: 100vh;
     }
 
     .nav-menu.active{
